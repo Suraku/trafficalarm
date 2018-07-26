@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.percent.PercentRelativeLayout
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View style="@style/dividerLine"
+            android:id="@+id/adapterEventItem_dividerLine"
+            android:background="#d3d3d3"
+            android:layout_width="match_parent" />
+
+        <ImageView
+            android:id="@+id/adapterEventItem_levelIcon"
+            android:padding="6dp"
+            android:layout_width="0px"
+            app:layout_widthPercent="10%"
+            android:layout_height="match_parent"
+            android:layout_below="@id/adapterEventItem_dividerLine"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginBottom="@dimen/text_margin" />
+
+        <TextView
+            android:id="@+id/adapterEventItem_date"
+            android:textSize="@dimen/font_size_listSmall"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            app:layout_widthPercent="25%"
+            android:layout_height="match_parent"
+            android:layout_below="@id/adapterEventItem_dividerLine"
+            android:layout_toEndOf="@id/adapterEventItem_levelIcon"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginBottom="0dp"/>
+
+        <TextView
+            android:id="@+id/adapterEventItem_time"
+            android:textSize="@dimen/font_size_listSmall"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            app:layout_widthPercent="25%"
+            android:layout_height="match_parent"
+            android:layout_below="@id/adapterEventItem_date"
+            android:layout_toEndOf="@id/adapterEventItem_levelIcon"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="@dimen/text_margin"/>
+
+        <TextView
+            android:id="@+id/adapterEventItem_message"
+            android:textSize="@dimen/font_size_listSmall"
+            android:layout_width="0px"
+            app:layout_widthPercent="65%"
+            android:layout_height="match_parent"
+            android:layout_below="@id/adapterEventItem_dividerLine"
+            android:layout_toEndOf="@id/adapterEventItem_date"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginBottom="@dimen/text_margin" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+</layout>

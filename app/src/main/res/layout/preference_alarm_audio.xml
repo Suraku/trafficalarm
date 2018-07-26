@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.suraku.trafficalarm.fragments.Settings_PreferenceFragment"
+    android:id="@+id/prefAlarmAudio_RootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/preference_FileTextLayout"
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_weight="0.8"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/preference_alarmFileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="None"
+                android:textSize="16sp"
+                android:textColor="@color/pref_textview_black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Audio for alarm"
+                android:textSize="14sp"
+                android:paddingTop="3dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/preference_alarmTestPlayButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_fileselectplay" />
+
+</LinearLayout>

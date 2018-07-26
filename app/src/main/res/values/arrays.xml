@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sync_time_interval_keys">
+        <item>0</item>
+        <item>1</item>
+        <item>12</item>
+        <item>24</item>
+        <item>72</item>
+    </string-array>
+    <string-array name="sync_time_interval_values">
+        <item>Never</item>
+        <item>Hourly</item>
+        <item>12 Hours</item>
+        <item>24 Hours</item>
+        <item>72 Hours</item>
+    </string-array>
+
+    <string-array name="traffic_model_keys">
+        <item>best_guess</item>
+        <item>optimistic</item>
+        <item>pessimistic</item>
+    </string-array>
+    <string-array name="traffic_model_values">
+        <item>Best Guess</item>
+        <item>Optimistic</item>
+        <item>Pessimistic</item>
+    </string-array>
+
+</resources>

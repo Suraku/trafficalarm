@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.MainActivity">
+
+    <item android:id="@+id/action_settings" android:title="@string/app_title_settings"
+        android:orderInCategory="500" android:showAsAction="never" />
+
+    <item android:id="@+id/action_addressAdd" android:title="New Address"
+        android:orderInCategory="100" android:showAsAction="never" />
+
+    <item android:id="@+id/action_clearMainModel" android:title="Clear"
+        android:orderInCategory="1000" android:showAsAction="never" />
+
+</menu>

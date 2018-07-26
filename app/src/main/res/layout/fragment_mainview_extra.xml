@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_default"
+        android:text="About"
+        android:paddingBottom="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lorem ipsum dolor sit amet, vim cu causae eruditi efficiantur, usu id argumentum instructior. Vis eu recteque ullamcorper, eu sed quidam repudiandae. No cum consulatu maiestatis adipiscing. Dicunt graecis sed ei. Quo accusam vulputate ad.
+
+Pri at moderatius omittantur, vitae fastidii his et. Dicit latine fabellas sit an, exerci qualisque ex eam. Eu impetus ceteros vim, et natum qualisque contentiones vel. Nisl convenire tractatos sit ut, audire malorum per ne. Novum necessitatibus eu vis.
+
+Sed omittam repudiandae no, magna vocibus iudicabit sit ad. Pri natum propriae an, dolorem fabellas ei duo, impetus detracto mandamus et vis. Usu ei tibique repudiandae. Ei appetere theophrastus sed. Mei evertitur accommodare at.
+
+Ea tation probatus expetendis mel, quando ignota id mel, vel ex habemus urbanitas cotidieque. Agam omnesque vituperata vix an, eros hendrerit no usu, aeterno conceptam in sit. Usu ut quas adversarium, his errem choro noluisse ei. Duo vidit dolor tation ea, ea usu dictas veritus, eirmod percipit per ut. Nec an vidit posidonium, ne vim habeo feugait.
+" />
+
+</LinearLayout>

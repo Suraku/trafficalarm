@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.suraku.trafficalarm">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_trafficalarmlogo"
+        android:logo="@drawable/ic_trafficalarmlogo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/com.suraku.default">
+
+        <!-- API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="TODO" />
+
+        <!-- Services -->
+        <service android:name=".services.AlarmIntentService" android:stopWithTask="true" />
+        <receiver android:name=".services.AlarmReceiver" />
+
+        <receiver
+            android:name=".services.AppBootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- Activities -->
+        <activity
+            android:name=".activities.MainActivity"
+            android:launchMode="singleInstance">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/app_title_settings"
+            android:parentActivityName=".activities.MainActivity" />
+
+        <activity
+            android:name=".activities.AddressActivity"
+            android:label="@string/app_title_address"
+            android:parentActivityName=".activities.MainActivity" />
+
+        <activity
+            android:name=".activities.AlarmActivity"
+            android:launchMode="singleInstance" />
+
+    </application>
+
+</manifest>

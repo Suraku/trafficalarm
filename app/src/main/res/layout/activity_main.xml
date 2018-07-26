@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.suraku.trafficalarm.activities.MainActivity">
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/mainActivity_mainViewFragmentContainer"-->
+        <!--android:name="com.suraku.trafficalarm.fragments.MainView_ContentFragmentragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <!-- Main Content -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activityMain_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Left Drawer -->
+    <LinearLayout
+        android:id="@+id/mainActivity_listSideView"
+        android:orientation="vertical"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:src="@drawable/ic_trafficalarmtitle"
+            android:layout_width="210dp"
+            android:layout_height="80dp" />
+
+        <View style="@style/dividerLine"
+            android:background="#d3d3d3"
+            android:layout_width="match_parent" />
+
+        <TextView
+            android:id="@+id/mainActivity_listSide_alarmHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alarms:"
+            android:textSize="@dimen/font_size_small_1"
+            android:padding="10dp"/>
+
+        <ListView
+            android:id="@+id/mainActivity_listSide_alarmList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+
+        <View style="@style/dividerLine"
+            android:background="#d3d3d3"
+            android:layout_width="match_parent" />
+
+        <TextView
+            android:id="@+id/mainActivity_listSide_generalHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="General:"
+            android:textSize="@dimen/font_size_small_1"
+            android:padding="10dp"/>
+
+        <ListView
+            android:id="@+id/mainActivity_listSide_generalList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/app_title_alarm">
+
+        <CheckBoxPreference
+            android:key="@string/pref_key_customAlarmEnabled"
+            android:title="@string/pref_title_customAlarmEnabled"
+            android:summary="@string/pref_summary_customAlarmEnabled"
+            android:defaultValue="@string/pref_default_customAlarmEnabled" />
+
+        <com.suraku.trafficalarm.preferences.AlarmAudioPreference
+            android:key="@string/pref_key_alarmAudioName"
+            android:dependency="@string/pref_key_customAlarmEnabled"
+            android:defaultValue="" />
+
+        <CheckBoxPreference
+            android:key="@string/pref_key_isOnlyTrafficAlerts"
+            android:title="@string/pref_title_isOnlyTrafficAlerts"
+            android:summary="@string/pref_summary_isOnlyTrafficAlerts"
+            android:defaultValue="@string/pref_default_isOnlyTrafficAlerts" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/app_title_network">
+
+        <com.suraku.trafficalarm.preferences.ThresholdDurationPreference
+            android:key="@string/pref_key_alarmDurationThreshold"
+            android:title="@string/pref_title_alarmDurationThreshold"
+            android:summary="@string/pref_summary_alarmDurationThreshold"
+            android:defaultValue="@integer/pref_default_alarmDurationThreshold" />
+
+        <ListPreference
+            android:key="@string/pref_key_trafficModel"
+            android:title="@string/pref_title_trafficModel"
+            android:dialogTitle="@string/pref_title_trafficModel"
+            android:summary="@string/pref_summary_trafficModel"
+            android:entries="@array/traffic_model_values"
+            android:entryValues="@array/traffic_model_keys"
+            android:defaultValue="@string/pref_defaultValue_trafficModel" />
+
+        <!--<ListPreference-->
+            <!--android:key="@string/pref_key_syncFreq"-->
+            <!--android:title="Data Sync Frequency"-->
+            <!--android:dialogTitle="Synchronize Frequency"-->
+            <!--android:summary="Frequency that data is backed up to the Cloud"-->
+            <!--android:entries="@array/sync_time_interval_values"-->
+            <!--android:entryValues="@array/sync_time_interval_values"-->
+            <!--android:defaultValue="Never" />-->
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

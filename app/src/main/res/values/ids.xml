@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="mainActivity_listSideView_share" type="id" />
+    <item name="mainActivity_listSideView_about" type="id" />
+
+</resources>

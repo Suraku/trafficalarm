@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.AddressActivity">
+
+    <item android:id="@+id/action_addressSave"
+        android:title="Save"
+        android:orderInCategory="500"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_greentick" />
+
+</menu>

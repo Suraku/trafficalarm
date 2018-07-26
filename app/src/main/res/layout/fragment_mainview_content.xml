@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.suraku.trafficalarm.fragments.MainView_ContentFragment"
+    android:id="@+id/fragment_mainView">
+
+    <data>
+        <variable name="Model" type="com.suraku.trafficalarm.viewmodels.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/mainFragment_percentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <TextView
+                android:id="@+id/mainFragment_alarmTimeDisplay"
+                android:background="@drawable/shape_square"
+                android:hint="00:00"
+                android:text="@{Model.alarmTime}"
+                android:textSize="@dimen/font_size_heading6"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:layout_marginBottomPercent="2%" />
+
+            <TextView
+                android:id="@+id/mainFragment_destAddressDisplay"
+                android:background="@drawable/shape_square"
+                android:hint="Destination address..."
+                android:text="@={Model.displayDestinationAddress}"
+                android:textSize="@dimen/font_size_small_3"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:padding="6sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mainFragment_alarmTimeDisplay"
+                app:layout_marginBottomPercent="2%" />
+
+            <TextView
+                android:id="@+id/mainFragment_originAddressDisplay"
+                android:background="@drawable/shape_square"
+                android:hint="Origin address..."
+                android:text="@={Model.displayOriginAddress}"
+                android:textSize="@dimen/font_size_small_3"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:padding="6sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mainFragment_destAddressDisplay"
+                app:layout_marginBottomPercent="2%" />
+
+            <LinearLayout
+                android:id="@+id/mainFragment_statusGroup"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/shape_greyfaintsquare"
+                app:layout_heightPercent="20%"
+                android:layout_below="@id/mainFragment_originAddressDisplay">
+
+                <ImageView
+                    android:id="@+id/mainFragment_alarmSetStatus"
+                    android:src="@drawable/ic_redcross"
+                    android:layout_width="0px"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/mainFragment_alarmSavedStatusImg"
+                    android:src="@drawable/ic_greentick"
+                    android:visibility="visible"
+                    android:layout_width="0px"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:id="@+id/mainFragment_alarmSavedStatusText"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:text="59"
+                    android:textSize="@dimen/font_size_heading6"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/mainFragment_setAlarmBtn"
+                android:text="Set"
+                android:textSize="@dimen/font_size_default"
+                android:layout_width="0px"
+                app:layout_widthPercent="50%"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mainFragment_statusGroup"
+                app:layout_marginBottomPercent="1%"
+                app:layout_marginTopPercent="1%" />
+
+            <Button
+                android:id="@+id/mainFragment_saveAlarmBtn"
+                android:text="Test"
+                android:textSize="@dimen/font_size_default"
+                android:layout_width="0px"
+                app:layout_widthPercent="50%"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mainFragment_statusGroup"
+                android:layout_toEndOf="@id/mainFragment_setAlarmBtn"
+                app:layout_marginBottomPercent="1%"
+                app:layout_marginTopPercent="1%" />
+
+            <View style="@style/dividerLine"
+                android:id="@+id/mainFragment_requestListDividerLine"
+                android:layout_below="@id/mainFragment_setAlarmBtn" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/mainFragment_fragmentListRecentRequests"
+            android:name="com.suraku.trafficalarm.fragments.RecentItem_ListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</layout>
